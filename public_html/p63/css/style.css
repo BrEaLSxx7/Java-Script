@@ -1,0 +1,13 @@
+body{
+	overflow-x: hidden;
+}
+#iniciar, #profesionaldescription{
+	position: absolute;
+	margin-top: -15%;
+	margin-left: 110vw;
+}
+#ok{
+	position: absolute;
+	margin-top: -22%;
+	margin-left: 110vw;
+}

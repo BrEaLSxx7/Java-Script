@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="../index.html">JAVASCRIPT</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+	 aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<div class=" container jumbotron justify-content-center my-5 col-md-4" ng-submit="validarInformacion()" ng-show="ahora">
+	<form>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label class="col-form-label">Estado civil</label>
+				<input type="text" required class="form-control" ng-model="user.estado" placeholder="Estado civil">
+			</div>
+			<div class="form-group col-md-6">
+				<label  class="col-form-label">Edad</label>
+				<input type="text" required class="form-control" ng-model="user.edad" placeholder="Digite edad">
+			</div>
+			<select ng-model="user.gender" class="custom-select " required>
+          <option selected >Genero biologico</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+		</div>
+		<button type="submit" class="btn btn-primary my-2 btn-block">Submit</button>
+	<input ng-click="reset()" type="reset" class="btn btn-danger btn-block" value="reset">
+
+	</form>
+</div>
+
+<div class="jumbotron container col-md-4 my-5" ng-show="alertsuccess">
+	{{msg}}
+</div>

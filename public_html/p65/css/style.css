@@ -1,0 +1,13 @@
+body{
+	overflow-x: hidden;
+}
+#iniciar{
+	position: absolute;
+	margin-top: -10%;
+	margin-left: 110vw;
+}
+#nameb, #idb{
+	position: absolute;
+	margin-top: -15%;
+	margin-left: 110vw;
+}
