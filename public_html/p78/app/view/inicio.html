@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="../index.html">JAVASCRIPT</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+	 aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+
+
+
+<div class="container jumbotron">
+	<form>
+		<label>Agregar un contacto</label>
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label class="col-form-label">Nombre</label>
+				<input required ng-model="contact.name" type="text" class="form-control" placeholder="Digite el nombre del contacto">
+			</div>
+			<div class="form-group col-md-4">
+				<label class="col-form-label">Apellidos</label>
+				<input required ng-model="contact.surname" type="text" class="form-control" placeholder="Digite el apellido del contacto">
+			</div>
+			<div class="form-group col-md-4">
+				<label class="col-form-label">Telefono</label>
+				<input required ng-model="contact.phone" type="number" class="form-control" placeholder="Digite el telefono del contacto">
+			</div>
+		</div>
+		<div class="container text-center my-2">
+			<button type="button" class="btn btn-info" ng-click="add()">ADD</button>
+		</div>
+	</form>
+</div>
+
+
+<div class="container jumbotron">
+	<label class="col-form-label">Contactos</label>
+			<div ng-repeat="person in people">
+				<details ng-open="showPerson">
+					<summary>{{person.name}}</summary>
+					<p>apellido {{person.surname}}</p>
+					<p>telefono {{person.phone}}</p>
+				</details>
+			<div>

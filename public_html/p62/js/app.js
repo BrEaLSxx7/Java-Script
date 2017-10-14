@@ -35,7 +35,7 @@ $(() => {
 			num1 = Number($("#numero1").val());
 			num2 = Number($("#numero2").val());
 			result = sumar(num1, num2);
-			$("#resultado").html("El resultado es " + result)
+			$("#resultado").html("El resultado es " + result);
 			$("#Mymodal").modal("show");
 		});
 
@@ -53,7 +53,7 @@ $(() => {
 		$("#form__input").animate({
 			'position': 'relative',
 			'margin-left': '110vw',
-		}, 2000, );
+		}, 2000);
 	});
 
 	$("#resta").click(() => {
@@ -70,7 +70,7 @@ $(() => {
 			num1 = Number($("#numero1").val());
 			num2 = Number($("#numero2").val());
 			result = restar(num1, num2);
-			$("#resultado").html("El resultado es " + result)
+			$("#resultado").html("El resultado es " + result);
 			$("#Mymodal").modal("show");
 		});
 
@@ -89,7 +89,7 @@ $(() => {
 			num1 = Number($("#numero1").val());
 			num2 = Number($("#numero2").val());
 			result = multiplicar(num1, num2);
-			$("#resultado").html("El resultado es " + result)
+			$("#resultado").html("El resultado es " + result);
 			$("#Mymodal").modal("show");
 		});
 
@@ -107,11 +107,11 @@ $(() => {
 			num1 = Number($("#numero1").val());
 			num2 = Number($("#numero2").val());
 			result = dividir(num1, num2);
-			$("#resultado").html("El resultado es " + result)
+			$("#resultado").html("El resultado es " + result);
 			$("#Mymodal").modal("show");
 		});
 	});
 
 
 
-})
+});

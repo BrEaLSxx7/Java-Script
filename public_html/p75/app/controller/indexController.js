@@ -1,4 +1,3 @@
-(() => {
 	'use strict';
 
 	angular
@@ -6,17 +5,20 @@
 		.controller('indexController', indexController);
 
 	indexController.$inject = ['$scope', '$state', '$log'];
-
 	function indexController($scope, $state, $log) {
-		$scope.user = {};
-		$scope.alertsuccess = false;
-		$scope.ahora = true;
-		$scope.validarInformacion = () => {
-			$scope.alertsuccess = !false;
-			$scope.msg = "Usted es una persona de " + $scope.user.edad + " años de edad, cuyo género bilógico es " + $scope.user.gender + " y su estado civil es " + $scope.user.estado;
+		$scope.msg;
+$scope.redi = function() {
+			$state.go('facebook');
+			console.log('hla');
 		}
-		$scope.reset = () => {
-			$scope.alertsuccess = false;
-		}
-	 }
-})();
+		$scope.$watch("msg", (newVal,oldVal) => {
+			if (newVal===oldVal) {
+				return;
+			}
+		$log.log($scope.msg);
+		$log.warn($scope.msg);
+		$log.info($scope.msg);
+		$log.error($scope.msg);
+		$log.debug($scope.msg);
+		})
+	}

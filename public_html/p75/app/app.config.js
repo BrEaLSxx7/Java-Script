@@ -19,6 +19,18 @@
 						}]);
 					}]
 				}
+			})
+			.state('facebook', {
+				url: '/facebook',
+				controller: 'indexController',
+				templateUrl: 'app/view/inicio.html',
+				resolve: {
+					loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load([{
+							files: ['app/controller/indexController.js']
+						}]);
+					}]
+				}
 			});
 	}
 

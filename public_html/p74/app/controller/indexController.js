@@ -9,16 +9,16 @@
 
 	function indexController($scope, $state, $log) {
 		$scope.msg;
-		$scope.$watch("msg", (newVal,oldVal) => {
-			if (newVal===oldVal) {
+		$scope.$watch("msg", (newVal, oldVal) => {
+			if (newVal === oldVal) {
 				return;
 			}
-		$log.log($scope.msg);
-		$log.warn($scope.msg);
-		$log.info($scope.msg);
-		$log.error($scope.msg);
-		$log.debug($scope.msg);
+			$log.log($scope.msg);
+			$log.warn($scope.msg);
+			$log.info($scope.msg);
+			$log.error($scope.msg);
+			$log.debug($scope.msg);
 		})
 
-	 }
+	}
 })();
